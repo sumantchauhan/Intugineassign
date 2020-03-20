@@ -41,4 +41,5 @@
 
 .itemlistcontainer{
   background: white;
+  display: flex;
 }

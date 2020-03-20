@@ -23,6 +23,7 @@ class ItemList extends Component {
     if(this.state.selectedData){
         return (  
             <div className="itemlistcontainer">
+                <div style={{flex:8}}>
                   <table className="table">
                   <thead>
                   <tr>
@@ -54,6 +55,8 @@ class ItemList extends Component {
                   </tbody>
               </table>
             </div>
+            </div>
+            
           );
     }else{
         return(
