@@ -1,10 +1,11 @@
-import React,{Component} from 'react';
+import React,{Component,PureComponent} from 'react';
 import {getCounter,getSelectedItem} from '../actions/transAction';
 import {connect} from 'react-redux';
 import ItemList from './ItemList';
 
 class Counter extends Component {
     constructor(props){
+        console.log("contructor called",props)
         super(props);
         this.state={
             data:[],
@@ -19,14 +20,17 @@ class Counter extends Component {
 
     componentWillReceiveProps(nextProps){
         if(nextProps){
-            console.log("props",nextProps)
             this.setState({data:nextProps.transData.transData})
         }
-        
     }
 
+    shouldComponentUpdate(prev,next){
+       return true;
+    }
+    
     componentDidMount(){
-        this.props.getCounter("mayank");
+        this.props.getCounter();
+        console.log("props in didmount",this.props);
     }
 
     onClick = (itemName) => {
@@ -37,6 +41,7 @@ class Counter extends Component {
 
     
     render(){
+    console.log("data incomming",this.state.data)
     const {data,selected} = this.state;
     if(data){
         return (
@@ -64,9 +69,9 @@ class Counter extends Component {
                 </div>
             </div>
             {
-                this.state.selected !==""  ? (
+                selected !==""  ? (
                 <div className="maincontainer">
-                  <ItemList name={this.setState.selected}/>
+                  <ItemList name={selected}/>
                 </div>
                 )
                 :

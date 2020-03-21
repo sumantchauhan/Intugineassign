@@ -7,7 +7,7 @@ const emails = {
 const name = "mayank";
 
 
-export const  getTransData =  async (name)   => {
+export const  getTransData =  async ()   => {
     const res = await fetch(url+name,{
         method:'POST',
         body:JSON.stringify(emails),
@@ -47,7 +47,7 @@ export  const getCounter = () => async dispatch => {
             counterData.nfi++;
         }
     })
-    dispatch({
+    return dispatch({
         type:GET_COUNTER,
         payload:counterData
     }) 

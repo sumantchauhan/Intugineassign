@@ -4,6 +4,14 @@
   justify-content: center;
 }
 
+.headre{
+  box-shadow: 2px 2px 2px 2px grey;
+}
+
+.whiteHrader{
+  box-shadow: 2px 2px 2px 2px #e6e6e6;
+}
+
 .counterItem{
   height: 100px;
   width: 100px;
@@ -42,4 +50,165 @@
 .itemlistcontainer{
   background: white;
   display: flex;
+  overflow: auto;
 }
+
+.leftTable{
+  flex: 2;
+  margin-right: 10px;
+  border: 1px solid lightblue;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.timeline{
+  flex: 10;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.timelineItem:first-child{
+  background-color: #e6f3ff;
+}
+
+.leftsideLine{
+  margin-top: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineItem{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  margin-top: 20px;
+  border: 1px solid lightblue;
+  padding: 7px;
+}
+
+.leftsidedotedline{
+  height: 40px;
+  border-top: 1px solid gray;
+  margin-top: 20px;
+  position: relative;
+}
+
+.horizontaldashedline{
+  border-right: 2px dashed lightblue;
+  margin-left: 10px;
+  position: relative;
+  margin: 10px 0px 10px 15px;
+}
+
+.desImage,.wareImage{
+  position: absolute;
+  left: -15px;
+  border-radius: 100%;
+  border: 1px solid gray;
+  padding: 2px 6px;
+  background: lightblue;
+}
+
+.wareImage{
+  bottom: 0px;
+}
+
+
+#wrapper{
+  width:100%;
+  display:flex;
+}
+#col-1{
+  width:35%;
+  overflow-y:auto;
+  border: 1px solid lightblue;
+  display: flex;
+  position: relative;
+  padding:10px;
+}
+#col-2{
+  width:65%;
+  overflow-y:auto;
+  margin-left: 30px;
+  border: 1px solid lightblue;
+}
+
+.leftLine{
+  border-right: 2px dashed lightblue;
+  margin-left: 10px;
+}
+
+.timelineRight{
+  display: flex;
+  flex: 4;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.horizontalLine{
+  flex: 0.3;
+  height: 40px;
+  border-top: 1px solid lightslategrey;
+  margin-top: 20px;
+  position: relative;
+}
+
+.leftContent{
+  background-color: lightgreen;
+  height: 40px;
+  flex: 3;
+  display: flex;
+}
+
+.rightContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dot{
+  background: lightblue;
+  position: absolute;
+  left: -6px;
+  height: 14px;
+  width: 14px;
+  border-radius: 100%;
+  z-index: 100;
+  margin-top: -7px;
+}
+
+
+.rightItemList{
+  border: 1px solid lightblue;
+  height: 500px;
+  overflow-y:auto ;
+}
+
+.fontSize{
+  font-size: 12px;
+}
+
+.tableHeader{
+  color: #cccccc;
+  border: none !important;
+  font-size: 10px;
+}
+
+.delevered{
+  color: green;
+  font-size: 12px;
+}
+
+.table td, .table th {
+  border-top: none !important;
+}
+
+.tableitemborder{
+  border: 1px solid #cccccc !important;
+}
+

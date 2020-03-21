@@ -12,21 +12,25 @@ export default (state = initialState,action) => {
                 ...state,
                 transData:action.payload
             };
+            break;
             case GET_COUNTER:
                 return{
                     ...state,
                     transData:action.payload,
                 };
+            break
             case SELECTED_ITEM:
                 return{
                     ...state,
                     selectedItem:action.payload
                 }
+            break;
             case ERROR:
                 return{
                     ...state,
                     error:true
-                };
+            };
+             break
         default:
             return state;
     }
